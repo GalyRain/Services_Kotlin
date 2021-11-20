@@ -2,6 +2,8 @@ package com.elienz_dragon.services_kotlin
 
 import android.app.job.JobParameters
 import android.app.job.JobService
+import android.content.Context
+import android.content.Intent
 import android.util.Log
 import kotlinx.coroutines.*
 
@@ -41,5 +43,10 @@ class MyJobService: JobService() {
 
     private fun log(message: String) {
         Log.d("SERVICE_TAG", "MyService: $message")
+    }
+
+    companion object {
+
+        const val JOB_ID = 2
     }
 }
